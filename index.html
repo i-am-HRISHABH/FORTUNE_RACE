@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="windowContainer">
+      <div class="victoryScreen hideVicrotyScreen">
+        <div class="winnerScreen">
+          <div class="celebrationScreen"></div>
+          <img
+            id="winnerPhoto"
+            src="./images/superman.jpg"
+            alt="winnerKaPhoto"
+          />
+          <p id="winnerPara">
+            <span id="winnerName">PONTING</span> is the winner. <br />
+            Congratulation King!
+          </p>
+          <button id="resetButton">RESET</button>
+        </div>
+      </div>
+
+      <div class="navBar">Fortune<span>RACE</span></div>
+      <div class="gameArea">
+        <div class="player1Area">
+          <div id="player1Section" class="image-bar active_player_section">
+            <img
+              id="player1Image"
+              class="playerImage active_player_image"
+              src="./images/superman.jpg"
+              alt=""
+            />
+            <div class="player1Bar active_player_bar" style="height: 10%">
+              0%
+            </div>
+          </div>
+          <div class="playerName">SUPERMAN</div>
+        </div>
+        <div class="diceRollerArea">
+          <div id="c1" class="circle">.</div>
+          <div id="c2" class="circle">.</div>
+          <div class="rollerScore">
+            <div class="score">?</div>
+            <button class="hitButton">ROLL</button>
+            <button class="passButton">PASS</button>
+            <button class="resetButtonClass">RESET</button>
+          </div>
+        </div>
+        <div class="player2Area">
+          <div id="player2Section" class="image-bar">
+            <img
+              id="player2Image"
+              class="playerImage"
+              src="./images/batman.jfif"
+              alt=""
+            />
+            <div class="player2Bar" style="height: 10%">0%</div>
+          </div>
+          <div class="playerName">BATMAN</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

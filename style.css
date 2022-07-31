@@ -1,0 +1,294 @@
+body {
+  font-family: "Comfortaa", cursive;
+  background: grey;
+}
+
+:root {
+  --yellow: #ffd700;
+  --purple: rgb(144, 10, 137);
+  --lightGrey: rgb(128, 129, 127);
+  --grad1: rgb(4, 254, 250);
+  --grad2: rgb(76, 251, 1);
+}
+
+.windowContainer {
+  position: relative;
+}
+
+.victoryScreen {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.77);
+  background-size: contain;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.hideVicrotyScreen {
+  display: none;
+}
+
+.winnerScreen {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 60%;
+  padding: 1em 0;
+  border-radius: 1em;
+  position: relative;
+}
+
+.celebrationScreen {
+  background: url("./images/celebration.gif");
+  height: 80%;
+  width: 100%;
+  position: absolute;
+}
+
+#winnerPhoto {
+  height: 250px;
+  width: 250px;
+  border-radius: 15em;
+  border: 8px solid var(--purple);
+}
+
+#winnerPara {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+#resetButton {
+  width: 6em;
+  padding: 1em;
+  background: none;
+  border: 2px solid rgb(204, 1, 1);
+  border-radius: 3em;
+  color: rgb(204, 1, 1);
+  font-size: 1.2em;
+  cursor: pointer;
+}
+#resetButton:hover {
+  width: 9em;
+  background: rgb(204, 1, 1);
+  color: white;
+}
+
+.navBar {
+  background: black;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.navBar span {
+  color: white;
+}
+
+.gameArea {
+  display: flex;
+}
+
+.player1Area {
+  flex: 1;
+  padding: 1em;
+  height: 86vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player2Area {
+  flex: 1;
+  padding: 1em;
+  height: 86vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-bar {
+  height: 80vh;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 1.5em;
+  border: 4px solid black;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+.player1Bar {
+  margin-top: 1em;
+  background: black;
+
+  width: 100%;
+  height: 9%;
+  border-radius: 0 0 1.5rem 1.5rem;
+  color: grey;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.player2Bar {
+  margin-top: 1em;
+  background: black;
+  width: 100%;
+  height: 50%;
+  border-radius: 0 0 1.5rem 1.5rem;
+  text-align: center;
+  color: grey;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.playerImage {
+  height: 14vh;
+  width: 14vh;
+  border-radius: 10em;
+  border: 4px solid black;
+}
+
+.active_player_bar {
+  background: linear-gradient(to right, var(--grad1), var(--grad2));
+  color: black;
+}
+
+.active_player_section {
+  background: black;
+  border: none;
+}
+
+.active_player_image {
+  border: 5px solid var(--grad2);
+}
+
+.playerName {
+  font-size: 1.5em;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.diceRollerArea {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  background: linear-gradient(to bottom, orange, var(--yellow));
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  border-radius: 7em;
+}
+
+#c1 {
+  bottom: 2em;
+  left: 3em;
+}
+
+#c2 {
+  top: 3em;
+  right: 3em;
+}
+
+.rollerScore {
+  width: 70%;
+  height: 70%;
+  background: rgba(11, 11, 11, 0.579);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5em;
+  z-index: 1;
+  backdrop-filter: blur(1rem);
+}
+
+.score {
+  font-weight: bold;
+  height: 100px;
+  width: 100px;
+  padding: 0.4em;
+  background: var(--yellow);
+  border-radius: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+}
+
+.hitButton {
+  background: none;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 1em;
+  width: 15em;
+  border-radius: 4em;
+  border: 3px solid black;
+  cursor: pointer;
+}
+.hitButton:hover {
+  background: white;
+  border: none;
+  color: black;
+  font-size: 1.1em;
+}
+
+.passButton {
+  background: none;
+  font-weight: bold;
+  border: 3px solid black;
+  margin-top: 1em;
+  padding: 1em;
+  width: 15em;
+  border-radius: 4em;
+  cursor: pointer;
+}
+.passButton:hover {
+  background: white;
+  color: black;
+  border: none;
+  font-size: 1.1em;
+}
+
+.resetButtonClass {
+  background: none;
+  font-weight: bold;
+  border: 3px solid black;
+  margin-top: 1em;
+  padding: 1em;
+  width: 15em;
+  border-radius: 4em;
+  cursor: pointer;
+}
+.resetButtonClass:hover {
+  background: black;
+  border: none;
+  font-size: 1.1em;
+  color: white;
+}
